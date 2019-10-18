@@ -1,4 +1,10 @@
+var h = window.innerHeight;
+var pos = 0;
+
+console.log(h);
 setInterval(clock, 1000);
+setInterval(changeCss, 1000, 0);
+
 function clock() {
 	var d = new Date();
 	var months = [
@@ -40,4 +46,15 @@ function clock() {
 	// console.log(seconds);
 
 	document.getElementById('time').innerHTML = hours + ':' + minutes + ':' + seconds;
+}
+
+function changeCss(increment) {
+	// let pos = pos;
+	document.getElementById('day').style.position = 'relative';
+	document.getElementById('day').style.top = pos + 'px';
+	if (pos < h / 2 - 140) {
+		pos += increment;
+	} else {
+		pos -= increment;
+	}
 }
