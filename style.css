@@ -1,0 +1,26 @@
+body {
+	margin: 0 auto;
+	height: 100vh;
+	display: grid;
+	align-items: center;
+	font-size: 128px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: black;
+	color: yellow;
+}
+#date,
+#day,
+#time {
+	margin: 0 auto;
+}
+
+/* #date {
+    align-self: end;
+} */
+#day {
+	align-self: end;
+}
+
+#time {
+	align-self: start;
+}
